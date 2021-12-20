@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 23:09:23 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/19 23:36:50 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/20 16:29:39 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,17 @@ typedef struct s_b
 
 typedef struct s_core
 {
-	t_a a;
-	t_b b;
+	t_a *a;
+	t_b *b;
 }				t_core;
 
 
-char	**ft_split(char *str, char *charset);
-int		init_struct(t_a *a, t_b *b);
-int		w_count(char *str, char *charset);
+char	**ft_split(char const *s, char c);
+int		w_count(char const *s, char c);
 int		ft_atoi(const char *nptr);
 int		ft_error(void);
-int		parsing_1(int ac, char **av);
-int		parsing_2(char **av);
+int		parsing_1(int ac, char **av, t_a *a, t_b *b);
+int		parsing_2(char **av, t_a *a, t_b *b);
+int		check_parsing(char *str);
+int		check_doubles(t_a *a);
 #endif

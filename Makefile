@@ -6,7 +6,7 @@
 #    By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/19 22:44:13 by cmarouf           #+#    #+#              #
-#    Updated: 2021/12/19 23:37:53 by cmarouf          ###   ########.fr        #
+#    Updated: 2021/12/20 16:17:41 by cmarouf          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRCS = ./srcs/main.c		\
 	   ./srcs/parsing_1.c	\
 	   ./srcs/parsing_2.c	\
 	   ./srcs/error.c		\
-	   ./srcs/init_struct.c		\
+	   ./srcs/check_parsing.c		\
 
 UTILS = ./utils/ft_atoi.c	\
 		./utils/ft_split.c	\
