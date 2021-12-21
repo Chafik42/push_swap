@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 10:31:57 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/21 16:06:58 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/21 18:04:25 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -19,10 +19,10 @@ void	pb(t_a *a, t_b *b)
 
 	j = 0;
 	i = 0;
-	pushed = a->tab[0];
 	if (a->nsize != 0)
 	{
-		while (i < a->nsize)
+		pushed = a->tab[0];
+		while (i < a->nsize - 1)
 			a->tab[j++] = a->tab[++i];
 		i = b->nsize;
 		j = b->nsize;
@@ -44,10 +44,10 @@ void	pa(t_a *a, t_b *b)
 
 	j = 0;
 	i = 0;
-	pushed = b->tab[0];
 	if (b->nsize != 0)
 	{
-		while (i < b->nsize)
+		pushed = b->tab[0];
+		while (i < b->nsize - 1)
 			b->tab[j++] = b->tab[++i];
 		i = a->nsize;
 		j = a->nsize;

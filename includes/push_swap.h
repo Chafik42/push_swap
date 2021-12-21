@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 23:09:23 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/21 15:24:28 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/21 18:45:44 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,15 @@ typedef struct s_a
 typedef struct s_b
 {
 	int	*tab;
-	int len;
-	int nsize;
+	int	len;
+	int	nsize;
 }				t_b;
 
 typedef struct s_core
 {
-	t_a *a;
-	t_b *b;
+	t_	*a;
+	t_b	*b;
 }				t_core;
-
 
 char	**ft_split(char const *s, char c);
 int		w_count(char const *s, char c);

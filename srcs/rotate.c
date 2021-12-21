@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 14:41:09 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/21 16:07:53 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/21 18:11:53 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -19,14 +19,17 @@ void	ra(t_a *a)
 
 	j = 0;
 	i = 0;
-	temp = a->tab[0];
-	while (i < a->len)
+	if (a->nsize != 0)
 	{
-		a->tab[i] = a->tab[j + 1];
-		i++;
-		j++;
+		temp = a->tab[0];
+		while (i < a->len - 1)
+		{
+			a->tab[i] = a->tab[j + 1];
+			i++;
+			j++;
+		}
+		a->tab[a->nsize - 1] = temp;
 	}
-	a->tab[a->nsize - 1] = temp;
 	write(1, "ra\n", 3);
 }
 
@@ -38,14 +41,17 @@ void	rb(t_b *b)
 
 	j = 0;
 	i = 0;
-	temp = b->tab[0];
-	while (i < b->len)
+	if (b->nsize != 0)
 	{
-		b->tab[i] = b->tab[j + 1];
-		i++;
-		j++;
+		temp = b->tab[0];
+		while (i < b->len - 1)
+		{
+			b->tab[i] = b->tab[j + 1];
+			i++;
+			j++;
+		}
+		b->tab[b->nsize - 1] = temp;
 	}
-	b->tab[b->nsize - 1] = temp;
 	write(1, "rb\n", 3);
 }
 

@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 23:30:18 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/20 16:59:59 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/21 18:46:00 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -95,7 +95,7 @@ char	**ft_split(char const *s, char c)
 	split[w_count(s, c)] = NULL;
 	while (s[++i])
 	{
-		if ((is_charset(s[i], c) == 0) 
+		if ((is_charset(s[i], c) == 0)
 			&& (i == 0 || is_charset(s[i - 1], c) == 1))
 			split[++j] = get_string(&s[i], c);
 		if (!split)
