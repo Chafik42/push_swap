@@ -1,35 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing_1.c                                        :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/16 23:23:35 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/21 10:17:09 by cmarouf          ###   ########.fr       */
+/*   Created: 2021/12/21 14:41:09 by cmarouf           #+#    #+#             */
+/*   Updated: 2021/12/21 16:07:53 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-int	parsing_1(int ac, char **av, t_a *a, t_b *b)
+void	ra(t_a *a)
 {
 	int	i;
 	int	j;
+	int	temp;
 
 	j = 0;
 	i = 0;
-	a->tab = malloc(sizeof(int) * (ac - 1));
-	if (!a->tab)
-		return (0);
-	b->tab = malloc(sizeof(int) * (ac - 1));
-	if (!b->tab)
-		return (0);
-	a->len = ac - 1;
-	while (++i < ac)
+	temp = a->tab[0];
+	while (i < a->len)
 	{
-		if (!check_parsing(av[i]))
-			return (0);
-		a->tab[j++] = ft_atoi(av[i]);
+		a->tab[i] = a->tab[j + 1];
+		i++;
+		j++;
 	}
-	return (1);
+	a->tab[a->nsize - 1] = temp;
+	write(1, "ra\n", 3);
+}
+
+void	rb(t_b *b)
+{
+	int	i;
+	int	j;
+	int	temp;
+
+	j = 0;
+	i = 0;
+	temp = b->tab[0];
+	while (i < b->len)
+	{
+		b->tab[i] = b->tab[j + 1];
+		i++;
+		j++;
+	}
+	b->tab[b->nsize - 1] = temp;
+	write(1, "rb\n", 3);
+}
+
+void	rr(t_a *a, t_b *b)
+{
+	rb(b);
+	ra(a);
+	write(1, "rr\n", 3);
 }

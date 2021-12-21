@@ -6,14 +6,14 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 11:58:03 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/20 15:53:34 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/21 10:17:54 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
 int	search_doubles(int nbr, int index, t_a *a)
 {
-	while (index < a->nsize)
+	while (index < a->len)
 	{
 		if (nbr == a->tab[index])
 			return (0);
@@ -27,8 +27,8 @@ int	check_doubles(t_a *a)
 	int	i;
 
 	i = 0;
-	printf("TOTAL = %d\n", a->nsize);
-	while (i < a->nsize)
+	printf("TOTAL = %d\n", a->len);
+	while (i < a->len)
 	{
 		if (!search_doubles(a->tab[i], i + 1, a))
 			return (0);

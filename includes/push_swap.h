@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 23:09:23 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/20 16:29:39 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/21 15:24:28 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,20 @@ int		w_count(char const *s, char c);
 int		ft_atoi(const char *nptr);
 int		ft_error(void);
 int		parsing_1(int ac, char **av, t_a *a, t_b *b);
-int		parsing_2(char **av, t_a *a, t_b *b);
+int		parsing_2(char **av, t_a *a, t_b *b, int i);
 int		check_parsing(char *str);
 int		check_doubles(t_a *a);
+void	algo(t_a *a, t_b *b);
+void	sa(t_a *a);
+void	sb(t_b *b);
+void	ss(t_a *a, t_b *b);
+void	pa(t_a *a, t_b *b);
+void	pb(t_a *a, t_b *b);
+void	ra(t_a *a);
+void	rb(t_b *b);
+void	rr(t_a *a, t_b *b);
+void	rra(t_a *a);
+void	rrb(t_b *b);
+void	rrr(t_a *a, t_b *b);
+
 #endif

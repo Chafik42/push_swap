@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing_1.c                                        :+:      :+:    :+:   */
+/*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/16 23:23:35 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/21 10:17:09 by cmarouf          ###   ########.fr       */
+/*   Created: 2021/12/21 10:19:47 by cmarouf           #+#    #+#             */
+/*   Updated: 2021/12/21 16:46:45 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-int	parsing_1(int ac, char **av, t_a *a, t_b *b)
+void	algo(t_a *a, t_b *b)
 {
-	int	i;
-	int	j;
-
-	j = 0;
-	i = 0;
-	a->tab = malloc(sizeof(int) * (ac - 1));
-	if (!a->tab)
-		return (0);
-	b->tab = malloc(sizeof(int) * (ac - 1));
-	if (!b->tab)
-		return (0);
-	a->len = ac - 1;
-	while (++i < ac)
-	{
-		if (!check_parsing(av[i]))
-			return (0);
-		a->tab[j++] = ft_atoi(av[i]);
-	}
-	return (1);
+	a->nsize = a->len;
+	b->len = a->len;
+	b->nsize = 0;
+	pb(a, b);
 }

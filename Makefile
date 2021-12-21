@@ -6,7 +6,7 @@
 #    By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/19 22:44:13 by cmarouf           #+#    #+#              #
-#    Updated: 2021/12/20 16:17:41 by cmarouf          ###   ########.fr        #
+#    Updated: 2021/12/21 16:11:18 by cmarouf          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,11 @@ SRCS = ./srcs/main.c		\
 	   ./srcs/parsing_2.c	\
 	   ./srcs/error.c		\
 	   ./srcs/check_parsing.c		\
+	   ./srcs/algo.c		\
+	   ./srcs/rotate.c		\
+	   ./srcs/rrotate.c		\
+	   ./srcs/swap.c		\
+	   ./srcs/push.c	\
 
 UTILS = ./utils/ft_atoi.c	\
 		./utils/ft_split.c	\

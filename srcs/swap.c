@@ -1,35 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing_1.c                                        :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/16 23:23:35 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/21 10:17:09 by cmarouf          ###   ########.fr       */
+/*   Created: 2021/12/21 10:12:16 by cmarouf           #+#    #+#             */
+/*   Updated: 2021/12/21 16:08:24 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-int	parsing_1(int ac, char **av, t_a *a, t_b *b)
+void	sa(t_a *a)
 {
-	int	i;
-	int	j;
+	int	temp;
 
-	j = 0;
-	i = 0;
-	a->tab = malloc(sizeof(int) * (ac - 1));
-	if (!a->tab)
-		return (0);
-	b->tab = malloc(sizeof(int) * (ac - 1));
-	if (!b->tab)
-		return (0);
-	a->len = ac - 1;
-	while (++i < ac)
+	temp = 0;
+	if (a->nsize >= 2)
 	{
-		if (!check_parsing(av[i]))
-			return (0);
-		a->tab[j++] = ft_atoi(av[i]);
+		temp = a->tab[0];
+		a->tab[0] = a->tab[1];
+		a->tab[1] = temp;
 	}
-	return (1);
+	write(1, "sa\n", 3);
+}
+
+void	sb(t_b *b)
+{
+	int	temp;
+
+	temp = 0;
+	if (b->nsize >= 2)
+	{
+		temp = b->tab[0];
+		b->tab[0] = b->tab[1];
+		b->tab[1] = temp;
+	}
+	write(1, "sb\n", 3);
+}
+
+void	ss(t_a *a, t_b *b)
+{
+	sa(a);
+	sb(b);
+	write(1, "ss\n", 3);
 }
