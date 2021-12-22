@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algo.c                                             :+:      :+:    :+:   */
+/*   utils_algo.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/21 10:19:47 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/22 13:09:52 by cmarouf          ###   ########.fr       */
+/*   Created: 2021/12/22 12:39:55 by cmarouf           #+#    #+#             */
+/*   Updated: 2021/12/22 15:11:11 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-void	algo(t_a *a, t_b *b)
+int	is_sort(t_a *a)
 {
-	a->nsize = a->len;
-	b->len = a->len;
-	b->nsize = 0;
-	if (is_sort(a))
+	int	i;
+
+	i = 1;
+	if (a->nsize == 0 || a->nsize == 1)
+		return (1);
+	while (i < a->nsize)
 	{
-		printf("Array is already sorted");
-		return ;
+		if (a->tab[i - 1] > a->tab[i])
+				return (0);
+		i++;
 	}
-	if (a->nsize <= 3 || a->nsize <= 5)
-		small_algo(a, b);
-	return ;
+	return (1);
 }
