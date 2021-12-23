@@ -6,7 +6,7 @@
 #    By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/19 22:44:13 by cmarouf           #+#    #+#              #
-#    Updated: 2021/12/22 13:32:52 by cmarouf          ###   ########.fr        #
+#    Updated: 2021/12/23 02:36:25 by cmarouf          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRCS = ./srcs/main.c		\
 	   ./srcs/swap.c		\
 	   ./srcs/push.c		\
 	   ./srcs/utils_algo.c	\
+	   ./srcs/print.c	\
 
 UTILS = ./utils/ft_atoi.c	\
 		./utils/ft_split.c	\

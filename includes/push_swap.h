@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 23:09:23 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/22 15:11:20 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/23 02:36:42 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ void	rr(t_a *a, t_b *b);
 void	rra(t_a *a);
 void	rrb(t_b *b);
 void	rrr(t_a *a, t_b *b);
+void	print_stack(t_a *a, t_b *b, char *str);
 
 #endif
