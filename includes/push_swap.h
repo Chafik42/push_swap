@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 23:09:23 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/23 02:36:42 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/23 13:39:12 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ int		check_parsing(char *str);
 int		check_doubles(t_a *a);
 void	algo(t_a *a, t_b *b);
 void	small_algo(t_a *a, t_b *b);
+int		biggest_number(int nbr, t_a *a);
+int		lowest_number(t_a *a);
 int		is_sort(t_a *a);
 void	sa(t_a *a);
 void	sb(t_b *b);

@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 12:39:55 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/23 02:57:51 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/23 13:38:45 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -26,3 +26,34 @@ int	is_sort(t_a *a)
 	}
 	return (1);
 }
+
+int	biggest_number(int nbr, t_a *a)
+{
+	int	i;
+
+	i = 0;
+	while (i < a->nsize)
+	{
+		if (a->tab[i] > nbr)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int	lowest_number(t_a *a)
+{
+	int	i;
+	int	temp;
+
+	i = 0;
+	temp = a->tab[i];
+	while (i < a->nsize)
+	{
+		if (a->tab[i] < temp)
+			temp = a->tab[i];
+		i++;
+	}
+	return (temp);
+}
+
