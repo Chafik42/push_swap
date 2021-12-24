@@ -6,7 +6,7 @@
 #    By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/19 22:44:13 by cmarouf           #+#    #+#              #
-#    Updated: 2021/12/23 14:43:31 by cmarouf          ###   ########.fr        #
+#    Updated: 2021/12/24 00:17:14 by cmarouf          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,8 @@ SRCS = ./srcs/main.c		\
 
 UTILS = ./utils/ft_atoi.c	\
 		./utils/ft_split.c	\
+		./utils/ft_sort_int_tab.c	\
+		./utils/ft_memcpy.c	\
 
 OBJS = ${SRCS:.c=.o}
 

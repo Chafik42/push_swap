@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 23:09:23 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/23 17:45:28 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/24 00:46:13 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct s_a
 	int	*tab;
 	int	len;
 	int	nsize;
+	int	*clone;
 }				t_a;
 
 typedef struct s_b
@@ -38,6 +39,8 @@ typedef struct s_core
 }				t_core;
 
 char	**ft_split(char const *s, char c);
+void	ft_sort_int_tab(int *tab, int size);
+int		*ft_intdup(int const *src, size_t len);
 int		w_count(char const *s, char c);
 int		ft_atoi(const char *nptr);
 int		ft_error(void);
@@ -51,10 +54,10 @@ void	big_algo(t_a *a, t_b *b);
 int		biggest_number(int nbr, t_a *a);
 int		lowest_number(t_a *a);
 void	find_best(t_a *a, t_b *b, int low);
-void	find_bestv2(t_a *a, t_b *b, int low);
+//void	find_bestv2(t_a *a, t_b *b, int low);
 void	sort_5(t_a *a, t_b *b);
 void	sort_3(t_a *a);
-void	push_and_sort(t_a *a, t_b *b);
+//void	sort_b(t_b *b);
 int		is_sort(t_a *a);
 int		is_sort_b(t_b *b);
 void	sa(t_a *a);
