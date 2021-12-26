@@ -6,17 +6,17 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 01:37:07 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/23 02:46:59 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/26 16:13:55 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 #include <stdio.h>
 
-void    print_stack(t_a *a, t_b *b, char *str)
+void	print_stack(t_a *a, t_b *b, char *str)
 {
-	int    i;
-	int    ai;
-	int    bi;
+	int	i;
+	int	ai;
+	int	bi;
 
 	i = -1;
 	ai = a->nsize - 1;

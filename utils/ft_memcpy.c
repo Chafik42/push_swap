@@ -6,16 +6,16 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 00:15:08 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/24 00:28:24 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/26 16:14:47 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-void    *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	long unsigned int    i;
-	unsigned char        *dest1;
-	const unsigned char    *src1;
+	long unsigned int	i;
+	unsigned char		*dest1;
+	const unsigned char	*src1;
 
 	src1 = src;
 	dest1 = dest;
@@ -28,9 +28,9 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-int    *ft_intdup(int const *src, size_t len)
+int	*ft_intdup(int const *src, size_t len)
 {
-	int    *p;
+	int	*p;
 
 	p = NULL;
 	p = (int *)malloc(len * sizeof(int));

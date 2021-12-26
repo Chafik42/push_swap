@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 23:23:03 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/24 00:20:59 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/26 16:09:44 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -54,19 +54,6 @@ int	main(int ac, char **av)
 		}
 		algo(core->a, core->b);
 	}
-	/*int i = 0;
-	while (i < 9)
-	{
-		printf("%d\n", core->a->tab[i]);
-		i++;
-	}
-	i = 0;
-	printf("================================\n");
-	while (i < 9)
-	{
-		printf("%d\n", core->b->tab[i]);
-		i++;
-	}*/
 	ft_free(core);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 23:09:23 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/24 00:46:13 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/25 16:22:17 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void	small_algo(t_a *a, t_b *b);
 void	big_algo(t_a *a, t_b *b);
 int		biggest_number(int nbr, t_a *a);
 int		lowest_number(t_a *a);
+int		lowest_number_b(t_b *b);
+int		biggest_number_b(int nbr, t_b *b);
 void	find_best(t_a *a, t_b *b, int low);
 //void	find_bestv2(t_a *a, t_b *b, int low);
 void	sort_5(t_a *a, t_b *b);

@@ -6,31 +6,58 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 14:32:00 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/24 00:52:54 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/26 16:09:34 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
+int	index_search(t_a *a, int nbr)
+{
+	int	i;
+
+	i = 0;
+	while (i < a->len)
+	{
+		if (a->clone[i] == nbr)
+			return (i);
+		i++;
+	}
+	return (0);
+}
+
+void	fill_index(t_a *a)
+{
+	int	i;
+
+	i = 0;
+	while (i < a->len)
+	{
+		a->tab[i] = index_search(a, a->tab[i]);
+		i++;
+	}
+}
+
 void	big_algo(t_a *a, t_b *b)
 {
-	int	ret;
-	int	middle;
-	int	pivot;
-	ret = 1;
-	middle = 5;
-	pivot = a->clone[middle];
-	while (lowest_number(a) != pivot)
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	fill_index(a);
+	while (!is_sort(a))
 	{
-		b_find_best(a, b, pivot);
+		j = 0;
+		while (j < a->len)
+		{
+			if (((a->tab[0] >> i) & 1) == 1)
+				ra(a);
+			else
+				pb(a, b);
+			j++;
+		}
+		while (b->nsize != 0)
+			pa(a, b);
+		i++;
 	}
-	while (!is_sort_b(b))
-		sort_b(b);
-	/*while (a->nsize > 3)
-		find_best(a, b, lowest_number(a));
-	sort_3(a);
-	while (a->nsize != a->len)
-		pa(a, b);*/
-	//print_stack(a, b, "FIN");
-	ret++;
-	pivot = a->clone[middle * ret];
 }

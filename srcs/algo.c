@@ -6,41 +6,10 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 10:19:47 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/24 00:35:15 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/12/26 16:24:44 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
-
-int b_find_path(t_a *a, int pivot)
-{
-	int i;
-
-	i = 0;
-	while (i < a->nsize)
-	{
-		if (a->tab[i] < pivot && i <= a->nsize / 2)
-			return (1);
-		else if (a->tab[i] < pivot && i > a->nsize / 2)
-			return (-1);
-		i++;
-	}
-	return (0);
-}
-
-void    b_find_best(t_a *a, t_b *b, int pivot)
-{
-	int best;
-
-	best = b_find_path(a, pivot);
-	while (a->tab[0] < pivot)
-	{
-		if (best == 1)
-			ra(a);
-		else
-			rra(a);
-	}
-	pb(a, b);
-}
 
 void	algo(t_a *a, t_b *b)
 {
@@ -51,7 +20,8 @@ void	algo(t_a *a, t_b *b)
 	ft_sort_int_tab(a->clone, a->len);
 	if (is_sort(a))
 	{
-		printf("Array is already sorted");
+		write(2, "Error\n", 6);
+		free(a->clone);
 		return ;
 	}
 	if (a->nsize <= 3 || a->nsize <= 5)
