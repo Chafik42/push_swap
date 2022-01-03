@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 23:23:03 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/26 16:09:44 by cmarouf          ###   ########.fr       */
+/*   Updated: 2022/01/03 15:40:15 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -37,23 +37,23 @@ int	main(int ac, char **av)
 
 	core = (t_core *)malloc(sizeof(t_core));
 	if (!core)
-		return (ft_error());
+		return (ft_error(core));
 	if (!init_struct(core))
-		return (ft_error());
+		return (ft_error(core));
 	if (ac > 1)
 	{
 		if (ac == 2)
-		{
-			if (!parsing_2(av, core->a, core->b, -1) || !check_doubles(core->a))
-				return (ft_error());
-		}
-		else if (ac > 2)
-		{
-			if (!parsing_1(ac, av, core->a, core->b) || !check_doubles(core->a))
-				return (ft_error());
-		}
+			if (!parsing_2(av, core->a, core->b, -1)
+				|| !check_doubles(core->a, core->b))
+				return (ft_error2(core));
+		if (ac > 2)
+			if (!parsing_1(ac, av, core->a, core->b)
+				|| !check_doubles(core->a, core->b))
+				return (ft_error2(core));
 		algo(core->a, core->b);
+		ft_free(core);
 	}
-	ft_free(core);
+	else
+		return (ft_error2(core));
 	return (0);
 }

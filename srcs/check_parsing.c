@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 11:58:03 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/22 14:03:16 by cmarouf          ###   ########.fr       */
+/*   Updated: 2022/01/03 15:46:45 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -22,7 +22,7 @@ int	search_doubles(int nbr, int index, t_a *a)
 	return (1);
 }
 
-int	check_doubles(t_a *a)
+int	check_doubles(t_a *a, t_b *b)
 {
 	int	i;
 
@@ -30,7 +30,12 @@ int	check_doubles(t_a *a)
 	while (i < a->len)
 	{
 		if (!search_doubles(a->tab[i], i + 1, a))
+		{
+			free(a->tab);
+			free(b->tab);
+			write(2, "Error\n", 6);
 			return (0);
+		}
 		i++;
 	}
 	return (1);

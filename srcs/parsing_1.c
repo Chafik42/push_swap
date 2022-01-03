@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 23:23:35 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/21 10:17:09 by cmarouf          ###   ########.fr       */
+/*   Updated: 2022/01/03 15:22:07 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -28,7 +28,11 @@ int	parsing_1(int ac, char **av, t_a *a, t_b *b)
 	while (++i < ac)
 	{
 		if (!check_parsing(av[i]))
-			return (0);
+		{
+			free(a->tab);
+			free(b->tab);
+			return (ft_error3());
+		}
 		a->tab[j++] = ft_atoi(av[i]);
 	}
 	return (1);

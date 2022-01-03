@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 10:19:47 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/12/26 16:24:44 by cmarouf          ###   ########.fr       */
+/*   Updated: 2022/01/03 14:47:46 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -20,7 +20,6 @@ void	algo(t_a *a, t_b *b)
 	ft_sort_int_tab(a->clone, a->len);
 	if (is_sort(a))
 	{
-		write(2, "Error\n", 6);
 		free(a->clone);
 		return ;
 	}
