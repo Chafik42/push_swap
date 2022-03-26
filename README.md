@@ -6,7 +6,7 @@ Full subject :
 
 
 
-This push_swap was made using the Radix sort method, using int tab.
+This push_swap was made using the Radix sort algorithm, using int tab.
 
 100 random numbers :
 ![wqeeeeeeeeeeeeeeeeeeee](https://user-images.githubusercontent.com/76008303/160243467-2d40b1a4-040d-46f3-97ce-316c36ae60c4.png)
