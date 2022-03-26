@@ -1,3 +1,11 @@
+![pushswap](https://user-images.githubusercontent.com/76008303/160243757-fa61ebe7-f686-421d-9d6d-5e205af00c48.png)
+
+
+Full subject :
+[en.subject.pdf](https://github.com/Chafik42/push_swap/files/8355609/en.subject.pdf)
+
+
+
 This push_swap was made using the Radix sort method, using int tab.
 
 100 random numbers :
