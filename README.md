@@ -1,3 +1,4 @@
+## Summary
 ![pushswap](https://user-images.githubusercontent.com/76008303/160243757-fa61ebe7-f686-421d-9d6d-5e205af00c48.png)
 
 
@@ -5,8 +6,13 @@ Full subject :
 [en.subject.pdf](https://github.com/Chafik42/push_swap/files/8355609/en.subject.pdf)
 
 
-
 This push_swap was made using the Radix sort algorithm, using int tab.
+
+## Usage 
+> make
+> ./push_swap (number to sort) | ./checker_OS (number to sort)
+
+## Example
 
 100 random numbers :
 ![wqeeeeeeeeeeeeeeeeeeee](https://user-images.githubusercontent.com/76008303/160243467-2d40b1a4-040d-46f3-97ce-316c36ae60c4.png)
